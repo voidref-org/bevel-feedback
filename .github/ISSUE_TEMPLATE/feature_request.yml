@@ -1,0 +1,38 @@
+name: Request a feature
+description: Suggest something new or an improvement to Bevel.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please search existing issues first, use a descriptive title, and keep each request to one idea.
+        Remove private information from anything you share.
+  - type: textarea
+    id: need
+    attributes:
+      label: What would you like to do?
+      description: Describe what you're trying to create or edit with Bevel and what's difficult or missing today.
+      placeholder: I'm trying to…, but…
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: How could Bevel help?
+      description: Describe the change you'd like and how it would help.
+      placeholder: It would help if I could…
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What do you do instead? (optional)
+      description: Describe any workaround or other options you've tried.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else you'd like to share? (optional)
+      description: Add examples, sketches, or screenshots. You can drag files into this box. Check them for private information first.
+    validations:
+      required: false

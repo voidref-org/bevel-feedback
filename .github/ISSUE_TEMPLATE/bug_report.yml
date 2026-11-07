@@ -1,0 +1,76 @@
+name: Report a bug
+description: Report something in Bevel that isn't working as expected.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use a short title that describes the problem.
+        Please search existing issues first and report one problem at a time.
+        Remove private information from text, screenshots, and recordings before posting.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What went wrong?
+      description: Describe the problem and what you were trying to do.
+      placeholder: When I try to…, Bevel…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can someone reproduce the problem?
+      description: List the steps that led to it. If it happened only once, share what you remember.
+      placeholder: |
+        1. Open…
+        2. Select…
+        3. Notice…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      placeholder: I expected…
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Operating system
+      description: Include the OS version. For export problems, also include the export platform.
+      placeholder: For example, Windows 11 or Ubuntu 24.04; exporting to Web
+    validations:
+      required: false
+  - type: input
+    id: godot_version
+    attributes:
+      label: Godot version
+      description: Copy the full version from Godot's About window.
+      placeholder: For example, 4.7.stable
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Bevel version
+      description: If you know the version, enter it here. Otherwise, leave this blank.
+    validations:
+      required: false
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: How often does it happen?
+      options:
+        - Every time
+        - Sometimes
+        - Only once so far
+        - I'm not sure
+    validations:
+      required: false
+  - type: textarea
+    id: details
+    attributes:
+      label: Anything else that could help? (optional)
+      description: Add screenshots, recordings, errors from Godot's Output or Debugger panels, or a workaround. If possible, attach a small project that reproduces the problem. Check attachments for private or licensed content first.
+    validations:
+      required: false
